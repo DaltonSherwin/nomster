@@ -129,9 +129,9 @@
    
         <% @place.photos.each do |photo| %>
             <div class="col-12 col-sm-6">
-                    <% if @place.photos.present? %>
-                        <%= image_tag photo.picture.url, class: "photo_show" %>
-                        <%= photo.caption %>
+            <%= image_tag photo.picture.to_s, class: "photo_show" %>
+            <p><% if photo.caption.present? %>
+                        <%= photo.caption %></p>
                     <% end %>
             </div>
         <% end %>
